@@ -21,5 +21,13 @@ Install node dependencies
    ```npm install```
 
 ### Testing
-Run ```node app.js``` to trigger the local server. Route your Drift app to an active server listening to the same port as app.js
 
+-Create your test app within [https://dev.drift.com/apps]
+- Add all of the required scope from above
+- Add your webhook server URL
+- Include your drift OAuth credentials in the .env file for [DRIFT_TOKEN]
+ 
+
+-Run ```node app.js``` to trigger the local server. Route your Drift app to an active server listening to the same port as app.js
+
+If you have any questions, please reach out to your CSM [Amanda Riffkin] or PSE manager [Nate Hoffelmeyer].
