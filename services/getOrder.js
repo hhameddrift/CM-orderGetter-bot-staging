@@ -1,7 +1,9 @@
 require('dotenv').config()
+const {getContact} = require("./getContact")
+
 const axios = require('axios');
-const cmNumber = `CM000019947`
-const SessionToken = 'f84d7df8-4611-4beb-97f1-6ed54fb81c59'
+const cmNumber = getContact(attributes.driftCmNumber)
+const SessionToken = getContact(attributes.driftSessionToken)
 const requestUrl = `https://dlapistage.covalentmetrology.com/api/order/v1/GetOrderStatusByCMNumberForLoggedInUser/${cmNumber}`
 const data = ''
 const config = {

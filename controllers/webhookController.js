@@ -5,6 +5,7 @@ const processWebhook = async(req, res) => {
     const button_body = req.body.data.body
     const contactId = req.body.data.author.id
     if (type === "button_clicked" && button_body === "Order Status") {
+        
         console.log("Acquiring an Order Status! Preloading order from order service.")
         res.status(200)
         await mainService(contactId)
