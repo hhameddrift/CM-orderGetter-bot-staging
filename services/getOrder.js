@@ -19,8 +19,10 @@ const config = {
 const orderGetter = async () => {
     return axios(config)
         .then((res) => {
-            console.log("Order Received.")
+            if (res.data) {
+                console.log("Order Received.")
             return JSON.stringify(res.data);
+            }
         }).catch(err => {
             console.log("ERR CODE ---> " + err);
             return {};
