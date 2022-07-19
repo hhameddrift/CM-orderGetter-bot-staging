@@ -21,7 +21,8 @@ const orderGetter = async () => {
         .then((res) => {
             if (res.data) {
                 console.log("Order Received.")
-            return JSON.stringify(res.data);
+                let order = res.data
+            return JSON.stringify(order);
             }
         }).catch(err => {
             console.log("ERR CODE ---> " + err);
