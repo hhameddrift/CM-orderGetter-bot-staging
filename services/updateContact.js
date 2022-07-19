@@ -9,7 +9,7 @@ const headers = {
 
 const updateContact = async (contactId, order) => {
     return axios
-        .patch(baseUrl + contactId, JSON.stringify({"attributes": {"order": order}}),
+        .patch(baseUrl + contactId, JSON.stringify({"attributes": {"order_status": order}}),
             {headers: headers})
         .then((res) => {
             return (res.data);
