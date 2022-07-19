@@ -1,5 +1,6 @@
 require('dotenv').config()
 const drift_token = process.env.DRIFT_TOKEN
+const {orderGetter} = require("./getOrder")
 const axios = require('axios');
 const baseUrl = 'https://driftapi.com/contacts/'
 const headers = {
@@ -9,7 +10,7 @@ const headers = {
 
 const updateContact = async (contactId, order) => {
     return axios
-        .patch(baseUrl + contactId, JSON.stringify({"attributes": {"order_status": order}}),
+        .patch(baseUrl + contactId, JSON.stringify({"attributes": {"order_status": orderGetter(order)}}),
             {headers: headers})
         .then((res) => {
             return (res.data);
