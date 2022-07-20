@@ -7,7 +7,7 @@ const headers = {
     'Content-Type': 'application/json'
 }
 
-const getContact = async (contactId) => {
+const getContact = async (authorId) => {
     return axios
         .get(baseUrl + contactId, {headers: headers})
         .then((res) => {
