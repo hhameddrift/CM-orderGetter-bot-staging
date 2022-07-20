@@ -21,8 +21,8 @@ const orderGetter = async () => {
         .then((res) => {
             if (res.data) {
                 console.log("Order Received.")
-                let order = res.data
-            return JSON.stringify(order);
+                let GetOrderStatusByCMNumberForLoggedInUser = JSON.stringify(res.data.data.opStatus)
+    return GetOrderStatusByCMNumberForLoggedInUser
             }
         }).catch(err => {
             console.log("ERR CODE ---> " + err);
