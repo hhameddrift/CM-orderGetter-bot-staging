@@ -11,7 +11,8 @@ const getContact = async (contactId) => {
     return axios
         .get(baseUrl + contactId, {headers: headers})
         .then((res) => {
-            return (res.data.data.attributes);
+            let contactAttributes = (res.data.data.attributes);          
+           return contactAttributes;
 
         }).catch(err => {
             console.log("Error locating contact attributes for contact ID: " + contactId);
