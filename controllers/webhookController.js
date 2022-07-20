@@ -3,7 +3,7 @@ const {mainService} = require("../services/mainService")
 const processWebhook = async(req, res) => {
     const type = req.body.type
     const button_body = req.body.data.body
-    const convoId = req.body.data['conversationId']
+    const convoId = req.body.data.conversationId
     const authorId = req.body.data.author.id;
 
     if (type === "button_clicked" && button_body === "Order Status") {
