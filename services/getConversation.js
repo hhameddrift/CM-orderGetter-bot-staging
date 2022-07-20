@@ -3,7 +3,8 @@ const axios = require("axios");
 
 
 const getConversation = async (conversationId, secret) => {
-  const DRIFT_AUTH_TOKEN = secret;
+const drift_token = process.env.DRIFT_TOKEN
+const drift_token = secret
   const baseUrl = "https://driftapi.com/conversations/";
   const headers = {
     Authorization: `Bearer ${DRIFT_AUTH_TOKEN}`,
