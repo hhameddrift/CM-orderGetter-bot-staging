@@ -3,7 +3,6 @@ const {mainService} = require("../services/mainService")
 const processWebhook = async(req, res) => {
     const type = req.body.type
     const button_body = req.body.data.body
-    const contactId = req.body.data.author.id
     const convoId = req.body.data['conversationId']
     const authorId = req.body.data.author.id;
 
