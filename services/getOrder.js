@@ -11,7 +11,7 @@ const config = {
     url: requestUrl,
     headers: {
         'Accept': '*/*',
-        'SessionToken': `${SessionToken}`
+        'SessionToken': `${sessionToken}`
     },
     data : data
 }
