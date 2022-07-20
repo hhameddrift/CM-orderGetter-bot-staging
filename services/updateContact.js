@@ -8,7 +8,7 @@ const headers = {
     'Content-Type': 'application/json'
 }
 
-const updateContact = async (contactId, order) => {
+const updateContact = async (authorId) => {
     return axios
         .patch(baseUrl + contactId, JSON.stringify({"attributes": {"order_status": orderGetter(GetOrderStatusByCMNumberForLoggedInUser)}}),
             {headers: headers})
