@@ -7,7 +7,7 @@ const headers = {
     'Content-Type': 'application/json'
 }
 
-const clearOrderNumber = async(id) => {
+const clearOrderNumber = async(authorId) => {
 
     return axios
         .patch(baseUrl + id,
