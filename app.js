@@ -6,6 +6,8 @@ const bodyParser = require('body-parser')
 const config = process.env
 const PORT = config.PORT
 
+
+
 app.use(express.static("public"))
 app.use(bodyParser.json())
 app.get('/', function(req, res) {

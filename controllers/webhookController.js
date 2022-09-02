@@ -9,9 +9,10 @@ const processWebhook = async(req, res) => {
     if (type === "button_clicked" && button_body === "Order Status") {
         
         console.log("Acquiring an Order Status! Preloading order from order service.")
-        
-        res.status(200)
+      
         await mainService(convoId, authorId)
+
+        res.sendStatus(200)
     } else {
         res.status(500).send("Server Error")
     }
